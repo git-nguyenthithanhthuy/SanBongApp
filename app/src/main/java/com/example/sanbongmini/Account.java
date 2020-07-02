@@ -8,15 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sanbongmini.Adapter.Account_Adapter;
-import com.example.sanbongmini.Model.Account_model;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
 
 public class Account extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -24,7 +18,6 @@ public class Account extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
-        recyclerView = findViewById(R.id.recycthongtin);
         txtchinhsua = findViewById(R.id.chinhsua);
         txtchinhsua.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,16 +35,7 @@ public class Account extends AppCompatActivity {
             }
         });
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        ArrayList<Account_model> account = new ArrayList<>();
-        account.add(new Account_model(R.drawable.ic_report, "Giới thiệu"));
-        account.add(new Account_model(R.drawable.ic_bookmark_border, "Chính sách bảo mật"));
-        account.add(new Account_model(R.drawable.ic_content_copy, "Đánh giá ứng dụng"));
-        account.add(new Account_model(R.drawable.ic_sentiment_satisfied, "Hỗ trợ & góp ý"));
-        recyclerView.setAdapter( new Account_Adapter(account, this));
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 

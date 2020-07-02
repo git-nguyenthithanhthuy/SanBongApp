@@ -6,15 +6,8 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sanbongmini.Adapter.Account_Adapter;
-import com.example.sanbongmini.Model.Account_model;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
 
 public class SanBong extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
